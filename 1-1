@@ -1,0 +1,53 @@
+<!DOCTYPE>
+<html lang="ru">
+<head>
+	<title>Зеличонок Вадим</title>
+	<meta charset="utf-8">
+	<style>
+		body {
+			font-family: sans-serif;  
+		}
+
+		dl {
+			display: table-row;
+		}
+
+		dt, dd {
+			display: table-cell;
+			padding: 5px 10px;
+			width: 200px;
+		}
+	</style>
+</head>
+
+<body>
+	<?php
+	$name = "Вадим";
+	$age = 28;
+	$email = "vadimzelichonok@mail.ru";
+	$city = "Росто-на-Дону";
+	$about = "Я очень уважаю постепенные преобразования и стараюсь делать нечто подобное в своей жизни, но меня всегда привлекали революционные перемены. Потому что они труднее. Они эмоционально намного напряжённее. И во время таких перемен ты всегда проходишь через период, когда все говорят тебе, что у тебя ничего не получится.";
+	?>
+	<h1>Страница пользователя <?php echo "$name" ?>a</h1>
+	<dl>
+		<dt>Имя</dt>
+		<dt><?php echo $name ?></dt>
+	</dl>
+	<dl>
+		<dt>Возраст</dt>
+		<dd><?php echo $age ?></dd>
+	</dl>
+	<dl>
+		<dt>Адрес электронной почты</dt>
+		<dd><a href="mailto:<?php echo "$email" ?>"><?php echo "$email" ?></a></dd>
+	</dl>
+	<dl>
+		<dt>Город</dt>
+		<dd><?php echo $city; ?></dd>
+	</dl>
+	<dl>
+		<dt>О себе</dt>
+		<dd style="width: 500px;"><?php echo $about; ?></dd>
+	</dl>
+</body>
+</html>
