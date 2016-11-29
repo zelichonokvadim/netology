@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<title>Введите число от 1 до 5</title>
+	</head>
+	<body>
+	<h1>Введите число от 1 до 5</h1>
+	<form method="post">
+	<input type="text" name="number" required pattern="^[ 0-9]+$">
+	<input type="submit">
+	</form>
+	</body>
+</html>
+
+<?php 
+if (isset($_POST['number'])){ 
+$number = (int) $_POST['number']; 
+} 
+else{ 
+$number = NULL;
+exit("Введите число от 1 до 5");
+}
+
+$computer = rand(1, 5); 
+
+if ($number > $computer){ 
+echo "Ваше число $number <br> Число компьютера $computer <br><h3>Результат: Много </h3></br>"; 
+} 
+elseif($number < $computer){ 
+echo "Ваше число $number <br> Число компьютера $computer <br><h3>Результат: Мало </h3></br>"; 
+} 
+elseif ($number == $computer){ 
+echo "Ваше число $number <br> Число компьютера $computer <br><h3>Результат: Вы угадали</h3></br>"; 
+} 
+
+?>
